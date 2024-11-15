@@ -9,15 +9,15 @@ fun asignaturas(): List<String> {
     return asignatura
 }
 
-fun mostrarAsignaturas(asignaturas: List<String>): String {
+fun yoestudioAsignaturas(asignaturas: List<String>): String {
     var mostrar = ""
     for (asignatura in asignaturas) {
-        mostrar += asignatura + "\n"
+        mostrar += "$asignatura\n"
     }
     return mostrar
 }
 
 fun main(args: Array<String>) {
     val asignaturas = asignaturas()
-    println(mostrarAsignaturas(asignaturas))
+    println(yoestudioAsignaturas(asignaturas))
 }

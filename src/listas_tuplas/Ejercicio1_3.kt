@@ -8,8 +8,22 @@ package listas_tuplas
 *  por el usuario.
 */
 
+fun asignaturasCurso(): List<String> {
+    return listOf("Matemáticas","Física","Química","Historia","Lengua")
+}
 
 
 fun main(args: Array<String>) {
-
+    val asignaturas = asignaturasCurso()
+    val notas = mutableListOf<Int>()
+    println("Introduzca las notas de las siguientes asignaturas.")
+    for (asignatura in asignaturas){
+        println("$asignatura: ")
+        val nota = readlnOrNull()?.toIntOrNull()?: 0
+        notas.add(nota)
+    }
+    println("\nNotas")
+    for ((indice, asignatura) in asignaturas.withIndex()) {
+        println("En $asignatura has sacado ${notas[indice]}.")
+    }
 }

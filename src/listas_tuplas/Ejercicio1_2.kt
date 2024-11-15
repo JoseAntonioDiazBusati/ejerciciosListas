@@ -8,7 +8,15 @@ package listas_tuplas
 */
 
 
+fun mostrarAsignaturas(asignaturas: List<String>): String {
+    var mostrar = ""
+    for (asignatura in asignaturas) {
+        mostrar += "Yo estudio $asignatura\n"
+    }
+    return mostrar
+}
 
 fun main(args: Array<String>) {
-
+    val asignaturas = listOf("Matemáticas", "Física", "Química", "Lengua", "Historia")
+    println(mostrarAsignaturas(asignaturas))
 }
